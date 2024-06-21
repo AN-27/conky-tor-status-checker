@@ -1,0 +1,42 @@
+conky.config = {
+    -- Allgemeine Einstellungen
+    update_interval = 5,
+    double_buffer = true,
+    no_buffers = true,
+    text_buffer_size = 2048,
+
+    -- Fenster-Einstellungen
+    own_window = true,
+    own_window_type = 'override',
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+
+    -- Grafikeinstellungen
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = false,
+
+    -- Schriftart und -größe
+    use_xft = true,
+    font = 'DejaVu Sans Mono:size=10',
+    xftalpha = 0.8,
+
+    -- Positionierung
+    alignment = 'top_right',
+    gap_x = 20,
+    gap_y = 20,
+
+    -- Farben
+    default_color = 'white',
+    color1 = 'green',
+    color2 = 'red',
+}
+
+conky.text = [[
+${font DejaVu Sans Mono:size=12}${color1}Tor Status${color}
+${hr}
+${execpi 5 /home/kali/check_ip.sh}
+]]
